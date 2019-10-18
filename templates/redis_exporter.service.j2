@@ -6,6 +6,9 @@ ExecStart={{ redis_exporter_symlink }} \
             {% if redis_exporter_check_keys != "" %}
                 -check-keys {{ redis_exporter_check_keys }} \
             {% endif %}
+            {% if redis_exporter_check_single_keys != "" %}
+                -check-single-keys {{ redis_exporter_check_single_keys }} \
+            {% endif %}
             {% if redis_exporter_script != "" %}
                 -script {{ redis_exporter_script }} \
             {% endif %}
