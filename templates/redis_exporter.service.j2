@@ -21,12 +21,8 @@ ExecStart={{ redis_exporter_symlink }} \
             {% if redis_exporter_redis_file != "" %}
                 -redis.file {{ redis_exporter_redis_file }} \
             {% endif %}
-                -log-format {{ redis_exporter_log_format }} \
                 -redis.addr {{ redis_exporter_redis_addr }} \
-                -namespace {{ redis_exporter_namespace }} \
                 -web.listen-address {{ redis_exporter_web_listen_address }} \
-                -web.telemetry-path {{ redis_exporter_web_telemetry_path }} \
-                -use-cf-bindings {{ redis_exporter_use_cf_bindings }}
 
 [Install]
 WantedBy=multi-user.target
