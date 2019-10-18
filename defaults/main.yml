@@ -8,6 +8,7 @@ redis_exporter_symlink: "{{ redis_exporter_install_dir }}/redis_exporter"
 
 redis_exporter_log_format: "txt"
 redis_exporter_check_keys: ""
+redis_exporter_check_single_keys: ""
 redis_exporter_script: ""
 redis_exporter_redis_addr: "redis://localhost:6379"
 redis_exporter_redis_password: ""
